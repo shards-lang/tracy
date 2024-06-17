@@ -873,6 +873,8 @@ private:
 
     AchievementsMgr* m_achievementsMgr;
     bool m_achievements = false;
+    double m_horizontalScrollMultiplier = 1.0;
+    double m_verticalScrollMultiplier = 1.0;
 };
 
 }

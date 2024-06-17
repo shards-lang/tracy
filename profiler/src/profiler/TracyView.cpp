@@ -56,6 +56,8 @@ View::View( void(*cbMainThread)(const std::function<void()>&, bool), const char*
     , m_cbMainThread( cbMainThread )
     , m_achievementsMgr( amgr )
     , m_achievements( config.achievements )
+    , m_horizontalScrollMultiplier( config.horizontalScrollMultiplier )
+    , m_verticalScrollMultiplier( config.verticalScrollMultiplier )
 {
     InitTextEditor();
     SetupConfig( config );
@@ -80,6 +82,8 @@ View::View( void(*cbMainThread)(const std::function<void()>&, bool), FileRead& f
     , m_cbMainThread( cbMainThread )
     , m_achievementsMgr( amgr )
     , m_achievements( config.achievements )
+    , m_horizontalScrollMultiplier( config.horizontalScrollMultiplier )
+    , m_verticalScrollMultiplier( config.verticalScrollMultiplier )
 {
     m_notificationTime = 4;
     m_notificationText = std::string( "Trace loaded in " ) + TimeToString( m_worker.GetLoadTime() );
